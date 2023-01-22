@@ -5,5 +5,6 @@ Technically speaking, Clearvoyance makes use of clear LCD screens with plexiglas
 
 To get our system on the market, we plan to market it first as a method of in-store advertising. Then, if our product is well-adopted by stores, we will expand to collaborate with emergency services. Because our sign can work as an emergency alert system, it could potentially be subsidized by local governments and emergency alert agencies for small businesses. 
 
+
 # Group Site
 https://sites.google.com/stevens.edu/clearvoyance/home
