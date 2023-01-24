@@ -1,5 +1,10 @@
-# OperationTetrisTowers
-The problem that this team is taking on is that outdoor architectural lighting and advertising are extremely expensive. It typically requires a team of engineers and construction workers to install the required electrical systems, making it virtually impossible for small businesses or older buildings to make use of such lighting systems.  Our project, which we are calling Operation Tetris Towers, will allow even small businesses to access the lighting and advertising that would typically be reserved for big corporations and buildings. Our proposed design removes the complexities and costs associated with exterior lighting through the use of wireless modules, which can be easily placed on the sides of buildings or windows. Each module will be composed of various RGB LEDs, which when synchronized together could turn any building into a vibrant display. In essence, our technology will allow for easier access to customizable lighting or advertisements for individuals or businesses, big or small.
+# Clearvoyance
+Clearvoyance is a transparent, customizable, and modular storefront display which can double as an emergency alert system in the event of an emergency. 
+
+Technically speaking, Clearvoyance makes use of clear LCD screens with plexiglass backlighting. Each of these modules can be used as a transparent display similar to a computer monitor. The modules will be controlled by a central computer system that allows stores and emergency services to push content to be displayed on the screens. For instance, stores could have seasonal promotions on display, and agencies could post visual notifications for emergencies like flooding. Businesses can also configure multiple modules together to form a larger display. One possibility could be placing modules in a 3-by-3 grid to fill a full storefront window. An important note is that although Clearvoyance is transparent like a window, Clearvoyance is not intended as a window itself. It could be placed behind a storefront window for similar effects, but it is not designed for long-term outdoor exposure. 
+
+To get our system on the market, we plan to market it first as a method of in-store advertising. Then, if our product is well-adopted by stores, we will expand to collaborate with emergency services. Because our sign can work as an emergency alert system, it could potentially be subsidized by local governments and emergency alert agencies for small businesses. 
+
 
 # Group Site
-https://sites.google.com/stevens.edu/tetris-towers/home
+https://sites.google.com/stevens.edu/clearvoyance/home
