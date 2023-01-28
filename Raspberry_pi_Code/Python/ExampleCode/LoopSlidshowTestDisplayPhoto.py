@@ -1,5 +1,7 @@
 from tkinter import *
 from PIL import Image,ImageTk
+import time
+
 
 #Create an instance of tkinter frame
 win = Tk()
@@ -28,29 +30,23 @@ def Process_Image(ph):
     #Load an image in the script
     return ImageTk.PhotoImage(rawimg)
     
+photo1 = Process_Image("photo1.jpg")
+photo2 = Process_Image("photo2.jpg")
+photo3 = Process_Image("photo3.jpg")
 
-photo1 = Process_Image("piPhoto.jpg")
-photo2 = Process_Image("4k")
-photo3 = Process_Image("800")
+photos = [photo1,photo2,photo3]
 
-x = 1
 
-def slides():
-    global x
-    if x == 4:
-        x = 1
-    if x == 1:
+
+while True:
+    for i in range(3):
         canvas.delete("all")
-        canvas.create_image(wwid/2, whgt/2, image=photo1)
-    elif x == 2:
-        canvas.delete("all")
-        canvas.create_image(wwid/2, whgt/2, image=photo2)
-    elif x == 3:
-        canvas.delete("all")
-        canvas.create_image(wwid/2, whgt/2, image=photo3)
-    x = x + 1
-    win.after(5000, slides)
+        canvas.create_image(wwid/2, whgt/2, image=photos[i])
+        win.update()
+        win.after(2000, None)
+
     
-slides()
 
-win.mainloop()
+
+
+
