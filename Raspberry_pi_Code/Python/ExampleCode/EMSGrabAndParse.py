@@ -3,11 +3,14 @@ import time
 from sys import argv
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
 ### SETTINGS ###
 
 # Could (should?) keep for security reasons
-api_key = "NO"
+load_dotenv()
+api_key = os.environ.get("WEATHER_API_KEY")
 # TODO: Change to the url of our emergency test server
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 # TODO: Could keep as a location system, but subject to change in final schema
@@ -16,7 +19,7 @@ complete_url = base_url + "appid=" + api_key + "&q=" + city_name
 
 
 ### MAIN FUNCTIONALITY ###
-# We'll fire this periodically. 
+# We'll fire this periodically.
 
 response = requests.get(complete_url)
 x = response.json()
