@@ -15,7 +15,7 @@ canvas = Canvas(win, width=wwid, height=whgt)
 canvas.pack()
 
 # TODO: $HOME_DIR = pwd
-rawimg = Image.open("Photos_Slides/piPhoto.jpg")
+rawimg = Image.open("/home/pi/Desktop/Clearvoyance/Clearvoyance/Photos_Slides/piPhoto.jpg")
 iwid, ihgt = rawimg.size
 
 ratio = min(wwid/iwid, whgt/ihgt)
