@@ -7,7 +7,7 @@ import json
 ### SETTINGS ###
 
 # Could (should?) keep for security reasons
-api_key = "eb737582e33e5f2a85cca9abb6e392e0"
+api_key = "NO"
 # TODO: Change to the url of our emergency test server
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 # TODO: Could keep as a location system, but subject to change in final schema
