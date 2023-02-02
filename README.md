@@ -8,5 +8,3 @@ To get our system on the market, we plan to market it first as a method of in-st
 
 # Group Site
 https://sites.google.com/stevens.edu/clearvoyance/home
-
-Test edit from Jordan, testing new linux!
