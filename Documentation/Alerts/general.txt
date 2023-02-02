@@ -1,0 +1,36 @@
+Amber, Silver, Blue, Camo Alerts
+	- All involve captured/at-risk or dangerous people classified by type of persons.
+	(Source: https://www.alert-software.com/blog/types-of-emergency-alerts)
+  
+Volcano Notifications
+  -Typically managaed by a locality severity basis often escalated quite quickly.
+  
+Tsunami Alerts
+  -Typically managaed by a locality severity basis often escalated quite quickly.
+  
+  ShakeAlert Earthquake Early Warning
+  -"ShakeAlert: An Earthquake Early Warning System for the West Coast of the United States ShakeAlert® is an earthquake early warning (EEW) system that detects significant earthquakes so quickly that alerts can reach many people before shaking arrives. ShakeAlert is not earthquake prediction, rather a ShakeAlert Message indicates that an earthquake has begun and shaking is imminent." (source: https://www.shakealert.org/
+
+Local Opt-in Alerts for Floods, Wildfires, Fire, Active shooter, Natural disaster, Chemical spill, Bomb threat, etc...
+  -Typically managaed by a county by county basis. However, can be escalated ususally through federal means for National Security. If ever needed.
+	(See: IOS Notification Settings->Goverment Alerts-> AMBER/EMERGENCY/Public Safety) (Andriod and other OS: Similar Systems) 
+	
+  [Network Providers have a mass notiication delivery system developed, regardless of phone type or cellular provider.]  see below:
+  
+  -"WEAs use SMS-Cell Broadcast (SMSCB), a one-to-many service, which simultaneously delivers messages to multiple recipients in a specified area. By using SMS-CB as the delivery service technology, WEAs avoid congestion issues experienced by traditional voice and text messaging (SMS-PP) alerting services, which translates into faster and more comprehensive delivery of messages during times of emergency. All the major U.S. cell carriers are participating in WEA on a voluntary basis. Wireless carriers are currently selling mobile devices with WEA capability included; however, not all handsets currently on the market are capable of receiving WEAs. It is anticipated that most commercially available phones will be WEA-capable in the near future. To find out what mobile devices are capable of receiving WEAs check with your local cell provider."
+  
+
+Wireless Emergency Alerts(WEA)
+  -"The Wireless Emergency Alerts system is an essential part of America's emergency preparedness. Since its launch in 2012, the WEA system has been used more than 70,000 times to warn the public about dangerous weather, missing children, 
+  and other critical situations – all through alerts on compatible cell phones and other mobile devices. WEA is a public safety system that allows customers who own compatible mobile devices to receive geographically targeted, text-like messages
+  alerting them of imminent threats to safety in their area. WEA enables government officials to target emergency alerts to specific geographic areas – lower Manhattan in New York, for example. The Warning, Alert and Response Network (WARN) Act 
+  established WEA in 2008 and it became operational in 2012. Wireless companies volunteer to participate in WEA, which is the result of a unique public/private partnership between the Federal Emergency Management Agency, the FCC, and the United 
+  States wireless industry in order to enhance public safety." (source: https://www.fcc.gov/consumers/guides/wireless-emergency-alerts-wea)
+  
+
+Verified Emergency Management News Sources
+  -"The National Incident Management System (NIMS) was established by FEMA and includes the Incident Command System (ICS). NIMS is used as the standard for emergency management by all public agencies in the United States for both planned and emergency events. 
+  Businesses with organized emergency response teams that interface with public emergency services can benefit from using the ICS. ICS is also well suited for managing disruptions of business operations. Public information and crisis communications are an 
+  integral part of the ICS structure." (https://www.ready.gov/incident-management)
+
+
