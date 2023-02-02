@@ -5,8 +5,8 @@ import time
 
 photos = []
 delay = 2000
-dir_path = "C:\\Users\\mzipp\\OneDrive\\Desktop\\College\\Stevens\\Fifth Semester\\D8\\Clearvoyance\\Photos_Slides\\" #This is the path for mikes computer
-#dir_path = "/home/pi/Desktop/Clearvoyance/Clearvoyance/Photos_Slides/" #this is the directy for the pi
+#dir_path = "C:\\Users\\mzipp\\OneDrive\\Desktop\\College\\Stevens\\Fifth Semester\\D8\\Clearvoyance\\Photos_Slides\\" #This is the path for mikes computer
+dir_path = "/home/pi/Desktop/Clearvoyance/Clearvoyance/Photos_Slides/" #this is the directy for the pi
 
 photos_name = sorted(os.listdir(dir_path)) # grab the photo names using os and sort them in a list
 numPhots = len(photos_name) # get the number of photos in the directory
@@ -39,6 +39,7 @@ for photo in photos_name:
     photos.append(Process_Image(photo))
 
 #displays each photo in the list and loops infinitally
+    win.config(cursor="none")
 while True:
     for i in range(numPhots):
         canvas.delete("all")
