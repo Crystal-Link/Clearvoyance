@@ -1,9 +1,5 @@
 import datetime
-
 import time
-
-from sys import argv
-
 import requests, json
 
 
@@ -21,9 +17,7 @@ response = requests.get(complete_url)
 x = response.json()
 
 
-
-#print(x)
-
-
+with open("sample.json", "w") as outfile:
+    json.dump(x, outfile)
 
 print(x["alert"][0]["Dec"])
