@@ -19,7 +19,7 @@ def main():
         if (alertType not in validAlertTypes):
             ("The alert type you entered is invalid, please try again")
             continue
-        alertDescription['Type'] = alertType
+        alertDictionary['Type'] = alertType
 
         # Have the user create a description to go along with alert message
         alertDescription = input("Please enter a description to go along with your alert:\n")
@@ -30,7 +30,7 @@ def main():
 
         # Check to see if the user would like to continue generating alerts
         doNotAcceptMoreAlerts = input("Would you like to generate another alert? (yes or no)\n").lower
-        if (doNotAcceptMoreAlerts is not "yes"):
+        if (doNotAcceptMoreAlerts != "yes"):
             break
 
     # Once all the alerts are completed, add the array to a general json dictionary
