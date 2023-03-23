@@ -1,1 +1,1 @@
-{"alert": [{"Weather": "Flood", "Dec": "Water will reach 5 feet evacuation advised!!!"}, {"AmberDec": "Child stolen please alert "}, {"Fire": "Please leave the area there is a fire near", "Alarm": 5}]}
+{"alerts": [{"Type": "Amber Alert", "Description": "Child Was Taken"}]}
