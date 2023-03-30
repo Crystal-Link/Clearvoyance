@@ -1,6 +1,7 @@
 import os
+import socket
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -11,6 +12,8 @@ app.config["SECRET_KEY"] = os.urandom(24)
 photos = UploadSet('photos', IMAGES)
 configure_uploads(app, photos)
 
+hostname = socket.gethostname()
+ip_address = socket.gethostbyname(hostname)
 
 class UploadForm(FlaskForm):
     photo = FileField('Upload an image', validators=[
@@ -28,4 +31,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=ip_address)
