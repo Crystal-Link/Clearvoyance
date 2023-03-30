@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Webpage</title>
+    <title>Picture Submissions</title>
 </head>
 <body>
-    <h1>Welcome to my webpage</h1>
-    <button id="submitImg">Click me</button>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block content %}
+    <h1>Upload an image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.photo.label }}
+            {{ form.photo(class="form-control-file") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    {% endblock %}
 </body>
 </html>

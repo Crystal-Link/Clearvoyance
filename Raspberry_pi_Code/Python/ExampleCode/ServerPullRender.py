@@ -10,7 +10,7 @@ complete_url = "http://10.156.118.103//TestAlert.json"
 root = tk.Tk()
 
 # Load the image file
-image = Image.open("/home/pi/Desktop/Clearvoyance/Clearvoyance/AlertPhotos/Photo1.jpg")
+image = Image.open("C:\\Users\\Jordan\\Documents\\Clearvoyance\\AlertPhotos\\Photo1.jpg")
 photo = ImageTk.PhotoImage(image)
 root.attributes("-fullscreen", True)
 root.configure(bg = "white")
