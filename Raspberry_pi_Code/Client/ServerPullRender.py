@@ -5,12 +5,12 @@ import requests, json
 import tkinter as tk
 from PIL import ImageTk, Image
 
-complete_url = "http://10.156.118.103//TestAlert.json"
+complete_url = "http://10.156.0.236//TestAlert.json"
 
 root = tk.Tk()
 
 # Load the image file
-image = Image.open("C:\\Users\\Jordan\\Documents\\Clearvoyance\\AlertPhotos\\Photo1.jpg")
+image = Image.open("C:\\Users\\Jordan\\Documents\\Clearvoyance\\AlertPhotos\\generic.jpg")
 photo = ImageTk.PhotoImage(image)
 root.attributes("-fullscreen", True)
 root.configure(bg = "white")
