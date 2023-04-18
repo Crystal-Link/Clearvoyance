@@ -1,4 +1,5 @@
-import datetime
+# import datetime
+import os
 import time
 import requests, json
 
@@ -9,8 +10,17 @@ complete_url = "http://10.156.0.236//TestAlert.json"
 
 root = tk.Tk()
 
+alertDict = {
+    "Generic": "generic.jpg"
+}
+
+# Define the image path
+img_dir_path = os.path.join("..","..","AlertPhotos") # relative directory
+img_name = alertDict["Generic"]
+img_path = os.path.join(img_dir_path, img_name)
+image = Image.open(img_path)
+
 # Load the image file
-image = Image.open("C:\\Users\\Jordan\\Documents\\Clearvoyance\\AlertPhotos\\generic.jpg")
 photo = ImageTk.PhotoImage(image)
 root.attributes("-fullscreen", True)
 root.configure(bg = "white")

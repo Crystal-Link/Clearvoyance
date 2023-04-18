@@ -25,7 +25,7 @@ def main():
         alertDescription = input("Please enter a description to go along with your alert:\n")
         alertDictionary['Description'] = alertDescription
 
-        # Once all the infromation is collected, add the completed alert to the alert array
+        # Once all the information is collected, add the completed alert to the alert array
         arrayOfAlerts.append(alertDictionary)
 
         # Check to see if the user would like to continue generating alerts
