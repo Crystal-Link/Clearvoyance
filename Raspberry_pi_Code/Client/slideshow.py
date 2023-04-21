@@ -29,7 +29,6 @@ def slideshow_display(gui_control, win_width, win_height, photos):
     iterator = 0
     while True:
         num_photos = len(photos)
-        print(num_photos)
         if (num_photos > 0):
             if (iterator >= num_photos):
                 iterator = 0
@@ -37,7 +36,7 @@ def slideshow_display(gui_control, win_width, win_height, photos):
             iterator += 1
             time.sleep(delay)
         else: 
-            new_loaded.wait()
+            new_loaded.wait(timeout=10)
             new_loaded.clear()
 
 # Used to listen/update for live uploads during slideshow functionality
@@ -50,7 +49,6 @@ def upload_listener(new_img_queue, win_width, win_height, photos):
 
 # The "main" slideshow function
 def slideshow(gui_control, win_width, win_height, new_img_queue, photo_bank):
-    # slideshow_display(gui_pipe, win_width, win_height)
     t_slideshow_disp = threading.Thread(target=slideshow_display, args=(gui_control, win_width, win_height, photo_bank))
     t_upload_listener = threading.Thread(target=upload_listener, args=(new_img_queue, win_width, win_height, photo_bank))
     t_slideshow_disp.start()

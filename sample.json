@@ -1,1 +1,1 @@
-{"alerts": [{"Type": "Amber Alert", "Description": "Child Was Taken"}]}
+{"alerts": [{"Type": "Other", "Description": "testest"}, {"Type": "Weather", "Description": "floods are on there way"}]}
