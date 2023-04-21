@@ -16,7 +16,7 @@ stop_event = threading.Event() # used to signal termination to the threads
 
 try:
     root = Tk() # create tkinter frame
-    root.attributes('-fullscreen', True) # sets display size\
+    # root.attributes('-fullscreen', True) # sets display size\
     win_width, win_height = root.winfo_screenwidth(), root.winfo_screenheight()
 
     stop_event = threading.Event() # used to signal termination to the threads

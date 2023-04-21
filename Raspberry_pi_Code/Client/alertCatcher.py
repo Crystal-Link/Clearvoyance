@@ -17,12 +17,16 @@ emergencyFound = threading.Event()
 def alert_send(gui_control, alerts): 
     # sends alerts and and loops infinitely
     iterator = 0
+    old_alert = {}
     while True:
         num_alerts = len(alerts)
         if (num_alerts > 0):
             if (iterator >= num_alerts):
                 iterator = 0
-            gui_control.put((2, alerts[iterator]))
+            if (alerts[iterator] != old_alert):
+                print('New alert found, sending.')
+                gui_control.put((2, alerts[iterator]))
+                old_alert = alerts[iterator]
             iterator += 1
             time.sleep(render_delay)
         else: 
