@@ -55,4 +55,5 @@ def upload_image():
 def store_server(queue):
     global upload_queue
     upload_queue = queue
-    app.run(host=ip_address)
+    print('Detected IP ' + ip_address)
+    app.run(host='0.0.0.0')
