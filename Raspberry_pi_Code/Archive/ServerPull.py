@@ -6,7 +6,7 @@ import requests, json
 
 
 
-complete_url = "http://10.156.118.103//TestAlert.json"
+complete_url = "http://10.156.0.236//TestAlert.json"
 
 while True:
 
@@ -18,5 +18,5 @@ while True:
     with open("sample.json", "w") as outfile:
         json.dump(x, outfile)
 
-    print(x["alert"][0]["Dec"])
+    print(x["alerts"][0]["Description"])
     time.sleep(5)

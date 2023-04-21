@@ -1,24 +1,62 @@
 # import subprocess
+import helpers
 import threading
 import queue
+from PIL import ImageTk
 # import sys
-import tkinter as tk
+import os
+from tkinter import *
 import WebServer.store_server
 import slideshow
 # import alertRender
 
-root = tk.Tk() # create tkinter frame
-root.attributes('-fullscreen', True) # sets display size
+stop_event = threading.Event() # used to signal termination to the threads
+#TODO: implement exit into the threads individually
 
-new_upload = threading.Event()
-new_store_img = queue.Queue()
+try:
+    root = Tk() # create tkinter frame
+    # root.attributes('-fullscreen', True) # sets display size\
+    win_width, win_height = root.winfo_screenwidth(), root.winfo_screenheight()
 
-t_store_server = threading.Thread(target=WebServer.store_server.store_server, args=(new_upload, new_store_img))
-t_slideshow = threading.Thread(target=slideshow.slideshow, args=(root, new_upload, new_store_img))
-# t_alertRender = threading.Thread(target=alertRender)
+    stop_event = threading.Event() # used to signal termination to the threads
+    #TODO: implement exit into the threads individually
+    gui_control = queue.Queue()
+    new_store_img = queue.Queue()
+    photo_bank = []
 
-t_store_server.start()
-t_slideshow.start()
+    t_store_server = threading.Thread(target=WebServer.store_server.store_server, args=(new_store_img, ))
+    t_slideshow = threading.Thread(target=slideshow.slideshow, args=(gui_control, win_width, win_height, new_store_img, photo_bank))
+    # t_alertRender = threading.Thread(target=alertRender)
+
+    t_store_server.start()
+    t_slideshow.start()
+    # slideshow.slideshow(root, new_upload, new_store_img)
+
+    emergency = False
+    while True:
+        # Wait for gui command
+        gui_command = gui_control.get(block=True, timeout=None)
+        # Wipe the window
+        for widget in root.winfo_children():
+            widget.destroy()
+        if gui_command[0] == 1 and not emergency:
+            # Got a slideshow command, config the root and display the image.
+            root.config(cursor="none")
+            root.columnconfigure(0, weight=1)
+            root.columnconfigure(1, weight=1)
+            root.columnconfigure(2, weight=1)
+            input_img = ImageTk.PhotoImage(gui_command[1])
+            label = Label(root, image=input_img)
+            label.grid(column=1, row=0)
+            root.update()
+        elif gui_command[0] == 2:
+            emergency = True
+        elif gui_command[0] == 3:
+            emergency = False
+
+except (KeyboardInterrupt, SystemExit):
+    # Clean up and exit gracefully on keyboard interrupt
+	stop_event.set()
 
 # def lcd_clock_TH():
 
