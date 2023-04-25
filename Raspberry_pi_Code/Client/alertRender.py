@@ -24,10 +24,15 @@ def render_alert(tk_root, alert):
     img_name = alertDict[alert["Type"]]
     img_path = os.path.join(img_dir_path, img_name)
     image = Image.open(img_path)
+    
+    new_size = (800, 800)
+    image = image.resize(new_size)
+
+    
     image = ImageTk.PhotoImage(image)
     image_label = tk.Label(tk_root, image=image)
     image_label.place(relx=0.5, rely=0.5, anchor="center")
-    text_label = tk.Label(tk_root, text="Alert",font=("Arial", 20),bg="white",highlightthickness=0, highlightbackground="white")
-    text_label.config(text=alert["Description"]+"\n\n\n\n\n")
+    text_label = tk.Label(tk_root, text="Alert",font=("Arial", 70),bg="white",highlightthickness=0, highlightbackground="white")
+    text_label.config(text=alert["Description"])
     text_label.pack(side="bottom", anchor="center")
     tk_root.update()
