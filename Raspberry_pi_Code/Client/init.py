@@ -39,8 +39,9 @@ try:
         # Wait for gui command
         gui_command = gui_control.get(block=True, timeout=None)
         # Wipe the window
-        for widget in root.winfo_children():
-            widget.destroy()
+        if not (gui_command[0] == 1 and emergency): 
+            for widget in root.winfo_children():
+                widget.destroy()
         if gui_command[0] == 1 and not emergency:
             # Got a slideshow command, config the root and display the image.
             root.config(cursor="none")
