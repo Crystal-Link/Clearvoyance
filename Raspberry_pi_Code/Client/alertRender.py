@@ -9,10 +9,10 @@ import tkinter as tk
 from PIL import ImageTk, Image
 
 alertDict = {
-    "Other": "generic.jpg",
-    "Amber Alert": "amber.webp",
+    "Other": "generic.png",
+    "Amber Alert": "amber.png",
     "Shooter": "shooter.png",
-    "Weather": "weather.jpg"
+    "Weather": "weather.png"
 }
 
 # Define the image path
