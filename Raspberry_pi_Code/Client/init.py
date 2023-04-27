@@ -23,11 +23,12 @@ try:
     #TODO: implement exit into the threads individually
     gui_control = queue.Queue()
     new_store_img = queue.Queue()
+    delete_store_img = queue.Queue()
     photo_bank = []
     alert_bank = []
 
-    t_store_server = threading.Thread(target=WebServer.store_server.store_server, args=(new_store_img, ))
-    t_slideshow = threading.Thread(target=slideshow.slideshow, args=(gui_control, win_width, win_height, new_store_img, photo_bank))
+    t_store_server = threading.Thread(target=WebServer.store_server.store_server, args=(new_store_img, delete_store_img))
+    t_slideshow = threading.Thread(target=slideshow.slideshow, args=(gui_control, win_width, win_height, new_store_img, delete_store_img, photo_bank))
     t_alertCatcher = threading.Thread(target=alertCatcher.alertCatcher, args=(gui_control, alert_bank))
 
     t_store_server.start()
