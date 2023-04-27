@@ -18,6 +18,7 @@ try:
     root = Tk() # create tkinter frame
     root.attributes('-fullscreen', True) # sets display size\
     win_width, win_height = root.winfo_screenwidth(), root.winfo_screenheight()
+    print((win_width, win_height))
 
     stop_event = threading.Event() # used to signal termination to the threads
     #TODO: implement exit into the threads individually
@@ -57,7 +58,7 @@ try:
             # Got an emergency alert! Need to render and display it. 
             emergency = True
             root.configure(bg = "white")
-            render_alert(root, gui_command[1])
+            render_alert(root, gui_command[1], win_width, win_height)
         elif gui_command[0] == 3:
             emergency = False
 
