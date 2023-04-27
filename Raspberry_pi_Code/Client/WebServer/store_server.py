@@ -42,8 +42,10 @@ class UploadForm(FlaskForm):
 def get_saved_images():
     saved_images = []
     for filename in os.listdir(app.config['UPLOADED_PHOTOS_DEST']):
-        if filename.endswith('.jpg') or filename.endswith('.png'):
-            saved_images.append(url_for('get_file', filename=filename))
+        for end in IMAGES:
+            if filename.endswith('.' + end):
+                saved_images.append(url_for('get_file', filename=filename))
+                break
     return saved_images
 
 @app.route('/uploads/<filename>')
